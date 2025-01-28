@@ -1,3 +1,4 @@
+# Import required libraries
 import os
 import logging
 from configparser import ConfigParser
@@ -7,6 +8,12 @@ from pdf2docx import Converter
 
 
 def pdf_to_word(pdf_file_path, word_file_path):
+    """
+    Convert a single PDF file to Word document
+    Args:
+        pdf_file_path: Path to source PDF file
+        word_file_path: Path to save the converted Word file
+    """
     cv = Converter(pdf_file_path)
     cv.convert(word_file_path)
     cv.close()
