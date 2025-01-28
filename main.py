@@ -1,5 +1,4 @@
 import os
-import sys
 import logging
 from configparser import ConfigParser
 from concurrent.futures import ProcessPoolExecutor
