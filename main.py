@@ -19,7 +19,7 @@ def pdf_to_word(pdf_file_path, word_file_path):
     cv.close()
 
 
-def main():
+def run():
     logging.getLogger().setLevel(logging.ERROR)
 
     config_parser = ConfigParser()
@@ -49,4 +49,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    run()
