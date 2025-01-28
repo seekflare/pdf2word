@@ -29,7 +29,7 @@ def main():
             file_name = os.path.splitext(file)[0]
             pdf_file = config["pdf_folder"] + "/" + file
             word_file = config["word_folder"] + "/" + file_name + ".docx"
-            print("正在处理: ", file)
+            print("Processing: ", file)
             result = executor.submit(pdf_to_word, pdf_file, word_file)
             tasks.append(result)
     while True:
@@ -38,7 +38,7 @@ def main():
             if not task.done():
                 exit_flag = False
         if exit_flag:
-            print("完成")
+            print("Completed")
             exit(0)
 
 
